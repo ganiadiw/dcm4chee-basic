@@ -2,6 +2,7 @@ window.config = {
   routerBasename: "/",
   extensions: [],
   modes: [],
+  // showStudyList: true untuk keperluan debug dahulu
   showStudyList: false,
   investigationalUseDialog: {
     option: 'never',
