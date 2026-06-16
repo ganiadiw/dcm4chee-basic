@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  ohif-viewer:
+    image: ohif/app:latest
+    container_name: ohif-viewer
+    ports:
+      - "3000:80"
+    volumes:
+      - ./app-config.js:/usr/share/nginx/html/app-config.js
+    restart: unless-stopped
+    networks:
+      - pacs-net
+networks:
+  pacs-net:
+    external: true
+    name:  dcm4chee-basic_pacs-net
